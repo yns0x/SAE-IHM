@@ -2,7 +2,7 @@
 
 ## Membres du groupe :
 
-- Maël Adriana-Zou
+- Maël Zou
 - Swan Viguerie
 - Axel Dupouy
 - Younes Neche
