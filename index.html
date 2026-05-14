@@ -12,11 +12,38 @@
 
 <div class="setup-form">
   <h2>Démarrer une nouvelle partie</h2>
-
+    <form class="game-form">
+        <div>
+            <label for="pseudo">Nom du joueur</label>
+            <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo" required>
+        </div>
+        <div>
+            <label for="difficulty">Niveau de difficulté</label>
+            <select id="difficulty" name="difficulty">
+                <option value="4">Facile - 4 paires</option>
+                <option value="5">Moyen - 5 paires</option>
+                <option value="6">Difficile - 6 paires</option>
+                <option value="8">Expert - 8 paires</option>
+            </select>
+        </div>
+        <div>
+            <label for="collection">Collection d'images</label>
+            <select id="collection" name="collection">
+                <option value="animals">Animaux</option>
+                <option value="fruits">Fruits</option>
+                <option value="cars">Voitures</option>
+            </select>
+        </div>
+        <button type="submit">Démarrer la partie</button>
+    </form>
 </div>
 
 <div class="game-area hidden">
-  <div class="game-area-header"></div>
+  <div class="game-area-header">
+      <h2 id="player-name"></h2>
+      <span class="game-timer">00:00</span>
+      <button id="abandon">Abandonner</button>
+  </div>
   <div class="game-board"></div>
 </div>
 </body>

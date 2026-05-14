@@ -8,7 +8,7 @@ export class ApiService {
    * Crée une nouvelle partie sur le serveur.
    * @param {string} pseudo nom du joueur
    * @param {number} difficulty niveau de difficulé
-   * @returns {Promise<GameReturn>}
+   * @returns {Promise<reponse>}
    */
   static async createGame(pseudo, difficulty) {
     const response = await fetch(`${MEMORY_URL}/`, {
@@ -17,7 +17,8 @@ export class ApiService {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        // Todo compléter le body
+          name: pseudo,
+          difficulty: difficulty
       })
     });
 
