@@ -1,0 +1,109 @@
+/* ════════════════════════════════════════
+   MODE CHAOS — à coller à la fin de style.css
+   ════════════════════════════════════════ */
+
+/* ── Objets volants ── */
+.chaos-object {
+    position: fixed;
+    z-index: 999;
+    pointer-events: none;
+    object-fit: contain;
+    animation: chaosfly linear forwards;
+}
+
+@keyframes chaosfly {
+    0%   { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+    100% { transform: translate(var(--end-x), var(--end-y)) rotate(var(--rotation)) scale(0.6); opacity: 0; }
+}
+
+/* ── Calcul mental overlay ── */
+.chaos-math-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chaos-math-box {
+    background: var(--color-bg-panel);
+    border: 2px solid var(--color-border-input-focus);
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    text-align: center;
+    max-width: 380px;
+    width: 90%;
+    box-shadow: var(--box-shadow);
+}
+
+.chaos-math-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-title);
+    margin-bottom: 0.25rem;
+}
+
+.chaos-math-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-label);
+    margin-bottom: 1.25rem;
+}
+
+.chaos-math-question {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: monospace;
+    color: var(--color-text-heading);
+    margin-bottom: 1.5rem;
+}
+
+.chaos-math-choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.chaos-math-btn {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-border-input);
+    border-radius: 0.5rem;
+    background: var(--color-bg-input);
+    color: var(--color-text-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.chaos-math-btn:hover {
+    background: var(--color-btn-primary);
+    border-color: var(--color-border-input-focus);
+    color: var(--color-text-white);
+    transform: scale(1.05);
+}
+
+.chaos-math-error {
+    margin-top: 0.75rem;
+    color: #ff4444;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ── Vidéos subway surfer ── */
+.chaos-subway {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.9;
+    border-radius: 0.5rem;
+}
+
+.chaos-subway-left  { left: -450px; }
+.chaos-subway-right { right: -450px; }
+

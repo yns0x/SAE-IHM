@@ -1,0 +1,174 @@
+/* ── Thème principal ── */
+body,
+body.theme-midnight {
+    --color-bg-page:           oklch(0.08 0.05 290);
+    --color-bg-panel:          oklch(0.12 0.07 285);
+    --color-bg-input:          oklch(0.16 0.08 280);
+    --color-bg-card-front:     oklch(0.18 0.1 290);
+    --color-bg-card-back:      oklch(0.93 0.02 290);
+
+    --color-border-input:        oklch(0.28 0.12 285);
+    --color-border-input-focus:  oklch(0.5 0.2 285);
+    --color-border-card:         oklch(0.35 0.15 290);
+
+    --color-text-title:    oklch(0.78 0.2 300);
+    --color-text-heading:  oklch(0.88 0.08 295);
+    --color-text-label:    oklch(0.68 0.12 285);
+    --color-text-input:    oklch(0.9 0.04 290);
+    --color-text-white:    oklch(0.98 0 0);
+
+    --color-btn-primary:       oklch(0.38 0.2 290);
+    --color-btn-primary-hover: oklch(0.48 0.22 285);
+    --color-btn-danger:        oklch(0.45 0.18 350);
+    --color-btn-danger-hover:  oklch(0.4 0.16 345);
+
+    --color-timer:   oklch(0.72 0.2 40);
+    --color-accent:  oklch(0.65 0.18 300);
+    --color-success: oklch(0.65 0.14 150);
+    --box-shadow:    0 4px 12px rgba(80, 20, 160, 0.4);
+}
+
+/* ── Pastel ── */
+body.theme-pastel {
+    --color-bg-page:           oklch(0.96 0.02 340);
+    --color-bg-panel:          oklch(0.99 0.01 300);
+    --color-bg-input:          oklch(0.94 0.03 320);
+    --color-bg-card-front:     oklch(0.88 0.06 310);
+    --color-bg-card-back:      oklch(0.99 0.01 120);
+
+    --color-border-input:        oklch(0.78 0.08 320);
+    --color-border-input-focus:  oklch(0.6 0.14 310);
+    --color-border-card:         oklch(0.72 0.1 300);
+
+    --color-text-title:    oklch(0.5 0.18 330);
+    --color-text-heading:  oklch(0.3 0.06 300);
+    --color-text-label:    oklch(0.45 0.08 310);
+    --color-text-input:    oklch(0.25 0.04 300);
+    --color-text-white:    oklch(0.98 0 0);
+
+    --color-btn-primary:       oklch(0.68 0.18 330);
+    --color-btn-primary-hover: oklch(0.6 0.2 325);
+    --color-btn-danger:        oklch(0.65 0.16 15);
+    --color-btn-danger-hover:  oklch(0.58 0.18 12);
+
+    --color-timer:   oklch(0.5 0.2 160);
+    --color-accent:  oklch(0.62 0.16 200);
+    --color-success: oklch(0.58 0.18 150);
+    --box-shadow:    0 4px 16px rgba(220, 140, 180, 0.25);
+}
+
+/* ── Crépuscule ── */
+body.theme-sunset {
+    --color-bg-page:           oklch(0.1 0.04 35);
+    --color-bg-panel:          oklch(0.15 0.06 30);
+    --color-bg-input:          oklch(0.2 0.07 28);
+    --color-bg-card-front:     oklch(0.22 0.09 32);
+    --color-bg-card-back:      oklch(0.96 0.03 60);
+
+    --color-border-input:        oklch(0.38 0.12 35);
+    --color-border-input-focus:  oklch(0.6 0.18 40);
+    --color-border-card:         oklch(0.45 0.14 38);
+
+    --color-text-title:    oklch(0.82 0.2 55);
+    --color-text-heading:  oklch(0.9 0.06 45);
+    --color-text-label:    oklch(0.72 0.1 40);
+    --color-text-input:    oklch(0.88 0.04 50);
+    --color-text-white:    oklch(0.98 0 0);
+
+    --color-btn-primary:       oklch(0.55 0.2 38);
+    --color-btn-primary-hover: oklch(0.62 0.22 42);
+    --color-btn-danger:        oklch(0.48 0.18 20);
+    --color-btn-danger-hover:  oklch(0.42 0.16 18);
+
+    --color-timer:   oklch(0.78 0.18 75);
+    --color-accent:  oklch(0.72 0.2 55);
+    --color-success: oklch(0.65 0.15 140);
+    --box-shadow:    0 4px 12px rgba(180, 80, 20, 0.35);
+}
+
+/* ── Monochrome ── */
+body.theme-mono {
+    --color-bg-page:           oklch(0.06 0 0);
+    --color-bg-panel:          oklch(0.12 0 0);
+    --color-bg-input:          oklch(0.18 0 0);
+    --color-bg-card-front:     oklch(0.22 0 0);
+    --color-bg-card-back:      oklch(0.95 0 0);
+
+    --color-border-input:        oklch(0.3 0 0);
+    --color-border-input-focus:  oklch(0.6 0 0);
+    --color-border-card:         oklch(0.4 0 0);
+
+    --color-text-title:    oklch(0.95 0 0);
+    --color-text-heading:  oklch(0.88 0 0);
+    --color-text-label:    oklch(0.65 0 0);
+    --color-text-input:    oklch(0.85 0 0);
+    --color-text-white:    oklch(0.98 0 0);
+
+    --color-btn-primary:       oklch(0.35 0 0);
+    --color-btn-primary-hover: oklch(0.48 0 0);
+    --color-btn-danger:        oklch(0.42 0 0);
+    --color-btn-danger-hover:  oklch(0.35 0 0);
+
+    --color-timer:   oklch(0.9 0 0);
+    --color-accent:  oklch(0.75 0 0);
+    --color-success: oklch(0.7 0 0);
+    --box-shadow:    0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Lave ── */
+body.theme-lava {
+    --color-bg-page:           oklch(0.07 0.04 20);
+    --color-bg-panel:          oklch(0.12 0.06 18);
+    --color-bg-input:          oklch(0.17 0.08 22);
+    --color-bg-card-front:     oklch(0.2 0.1 25);
+    --color-bg-card-back:      oklch(0.95 0.02 40);
+
+    --color-border-input:        oklch(0.35 0.14 22);
+    --color-border-input-focus:  oklch(0.55 0.22 30);
+    --color-border-card:         oklch(0.42 0.16 25);
+
+    --color-text-title:    oklch(0.78 0.22 38);
+    --color-text-heading:  oklch(0.88 0.06 30);
+    --color-text-label:    oklch(0.68 0.12 28);
+    --color-text-input:    oklch(0.88 0.04 35);
+    --color-text-white:    oklch(0.98 0 0);
+
+    --color-btn-primary:       oklch(0.45 0.22 28);
+    --color-btn-primary-hover: oklch(0.54 0.24 32);
+    --color-btn-danger:        oklch(0.5 0.2 15);
+    --color-btn-danger-hover:  oklch(0.44 0.18 12);
+
+    --color-timer:   oklch(0.75 0.22 55);
+    --color-accent:  oklch(0.68 0.2 40);
+    --color-success: oklch(0.62 0.14 140);
+    --box-shadow:    0 4px 14px rgba(180, 40, 10, 0.45);
+}
+
+/* ── Arctique ── */
+body.theme-arctic {
+    --color-bg-page:           oklch(0.92 0.03 210);
+    --color-bg-panel:          oklch(0.97 0.02 205);
+    --color-bg-input:          oklch(0.88 0.04 208);
+    --color-bg-card-front:     oklch(0.78 0.08 215);
+    --color-bg-card-back:      oklch(0.99 0.01 200);
+
+    --color-border-input:        oklch(0.65 0.1 210);
+    --color-border-input-focus:  oklch(0.45 0.18 215);
+    --color-border-card:         oklch(0.6 0.12 212);
+
+    --color-text-title:    oklch(0.3 0.18 225);
+    --color-text-heading:  oklch(0.2 0.06 215);
+    --color-text-label:    oklch(0.38 0.1 210);
+    --color-text-input:    oklch(0.18 0.04 210);
+    --color-text-white:    oklch(0.98 0 0);
+
+    --color-btn-primary:       oklch(0.45 0.18 220);
+    --color-btn-primary-hover: oklch(0.38 0.2 218);
+    --color-btn-danger:        oklch(0.5 0.2 15);
+    --color-btn-danger-hover:  oklch(0.44 0.18 12);
+
+    --color-timer:   oklch(0.3 0.2 225);
+    --color-accent:  oklch(0.42 0.18 220);
+    --color-success: oklch(0.4 0.16 160);
+    --box-shadow:    0 4px 16px rgba(100, 180, 220, 0.3);
+}

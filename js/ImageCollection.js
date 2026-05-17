@@ -36,4 +36,11 @@ export const imageCollections = {
         {id: 8, name: "car8", url: "./assets/images/cars/car8.png"},
 
     ],
+    chaos: [
+        {id: 1, url: "./assets/images/chaospopup/chaos1.jpg"},
+        {id: 2, url: "./assets/images/chaospopup/chaos2.jpg"},
+        {id: 3, url: "./assets/images/chaospopup/chaos3.jpg"},
+        {id: 4, url: "./assets/images/chaospopup/chaos4.jpg"},
+        {id: 5, url: "./assets/images/chaospopup/chaos5.jpg"},
+    ]
 };

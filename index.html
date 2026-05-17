@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeu de Memory</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/chaos.css">
   <script src="js/app.js" type="module"></script>
 </head>
 <body>
@@ -18,12 +20,22 @@
             <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo" required>
         </div>
         <div>
-            <label for="difficulty">Niveau de difficulté</label>
+            <label for="difficulty">Mode de jeu</label>
             <select id="difficulty" name="difficulty">
-                <option value="4">Facile - 4 paires</option>
-                <option value="5">Moyen - 5 paires</option>
-                <option value="6">Difficile - 6 paires</option>
-                <option value="8">Expert - 8 paires</option>
+            <!-- Modes classiques -->
+            <optgroup label="Classique">
+                <option value="classic-4">Facile</option>
+                <option value="classic-5">Moyen</option>
+                <option value="classic-6">Difficile</option>
+                <option value="classic-8">Expert</option>
+            </optgroup>
+
+            <!-- Modes spéciaux -->
+            <optgroup label="Modes spéciaux">
+                <option value="time_attack-8">Contre La Montre</option>
+                <option value="shuffle-8">Shuffle</option>
+                <option value="chaos-8">Mode Chaos</option>
+            </optgroup>
             </select>
         </div>
         <div>
@@ -37,11 +49,10 @@
         <button type="submit">Démarrer la partie</button>
     </form>
 </div>
-
 <div class="game-area hidden">
   <div class="game-area-header">
       <h2 id="player-name"></h2>
-      <span class="game-timer">00:00</span>
+      <span class="game-timer"><strong>00:00</strong></span>
       <button id="abandon">Abandonner</button>
   </div>
   <div class="game-board"></div>
