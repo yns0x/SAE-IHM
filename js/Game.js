@@ -1,6 +1,9 @@
 import {imageCollections} from './ImageCollection.js';
 import {ApiService} from './ApiService.js';
 import {ChaosManager} from "./ChaosManager.js";
+import { SoundManager } from './SoundManager.js';
+
+export const soundManager = new SoundManager();
 
 
 export class Game {
@@ -48,6 +51,7 @@ export class Game {
         this.#chaosManager = null;
         this.#gameEnded = false;
         this.#victoryTimeout = null;
+        soundManager.init();
     }
 
     /**
@@ -80,6 +84,11 @@ export class Game {
                 this.#enAttente = blocked;
             });
             this.#chaosManager.start();
+            soundManager.playBackground('BackgroundChaos')
+        }
+
+        if(!this.#chaosMode) {
+            soundManager.playBackground('BackgroundNormal')
         }
 
         const images = imageCollections[collection].slice(0, difficulty);
@@ -167,7 +176,11 @@ export class Game {
         if (card.classList.contains('flip')) return;
         if (this.#timeAttackMode && this.#timeLimit <= 0) return;
 
+        soundManager.play('click');
+
         this.#domManager.flipCard(card);
+
+        soundManager.play('flipCard')
 
         if (!this.#premiereCarteRetournee) {
             this.#premiereCarteRetournee = {card, imageId};
@@ -192,6 +205,7 @@ export class Game {
         deuxiemeCarte.classList.add('locked');
         this.#premiereCarteRetournee = null;
         this.#pairesRestantes--;
+        soundManager.play('goodPicks');
 
         if (this.#pairesRestantes === 0) {
             this.#victoryTimeout = setTimeout(() => {
@@ -211,6 +225,7 @@ export class Game {
         premiere.classList.add('shake');
         deuxiemeCarte.classList.add('shake');
         this.#premiereCarteRetournee = null;
+        soundManager.play('wrongPicks');
 
         setTimeout(() => {
             this.#domManager.unflipCard(premiere);
@@ -247,6 +262,8 @@ export class Game {
             this.#chaosManager = null;
         }
 
+        soundManager.stopBackground()
+
         try {
             const result = await ApiService.updateGameResult(this.#id, this.#pairesRestantes);
             console.log('Fin de partie:', result);
@@ -272,14 +289,16 @@ export class Game {
                     this.#fautes,
                     performanceMessage ? `${endMessage}\n${performanceMessage}` : endMessage,
                     currentMode,
-                    isVictory  // ← nouveau paramètre
+                    isVictory
                 );
             };
 
             if (isVictory) {
                 this.#domManager.playVictoryAnimation(showResults);
+                soundManager.play('win');
             } else {
                 showResults();
+                soundManager.play('forfeit');
             }
 
         } catch (error) {
@@ -329,6 +348,8 @@ export class Game {
      */
     shuffleCards() {
         if (this.#enAttente) return;
+
+        soundManager.play('shuffleCards');
 
         const cards = document.querySelectorAll('.game-board .card:not(.locked)');
         const cardsArray = Array.from(cards);
