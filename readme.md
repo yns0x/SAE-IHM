@@ -25,6 +25,7 @@ Le joueur doit retrouver les paires de cartes le plus  rapidement possible.
 - mode chaos/ADHD (alerte epilepsie) : Ce mode est fait pour te déconcentrer et challenger ta concentration à son max afin de finir le plus rapidement possible : des objets qui vont dans tout les sens, un gameplay subway surfer fait par nous-même pour le mettre en arrière plan ou sur les côtés du jeu, une sorte de calcul mental rapide qui vient à des moments aléatoires et bloque les events de clic tant que tu ne répond pas
 - mode shuffle : toutes les 5/10 secondes, les cartes changent tous de position pour perturber le joueur
 - selection de thème qu'on aura fait nous même dans le CSS en haut à droite dans le lobby (celui là est purement esthétique)
+- Mode jeu à 3 vies : Ce mode consiste à être à l'affût et éviter les erreurs... Le joueur dispose de 3 vies : à chaque mauvaise paires, il en perd une. Après 3 erreurs, la partie se termine avec un Game Over.
 
 ## Changements purement esthétique (Quality Of Life)
 
