@@ -17,6 +17,7 @@ export class Game {
     #enAttente;
     #domManager;
     #fautes;
+    #lives;
 
     // Timer
     #timerInterval;
@@ -29,6 +30,7 @@ export class Game {
     #shuffleInterval;
     #chaosMode;
     #chaosManager;
+    #troisviesManager;
 
     // Contrôle de fin de partie
     #gameEnded;
@@ -66,6 +68,7 @@ export class Game {
         this.#fautes = 0;
         this.#gameEnded = false;
         this.#victoryTimeout = null;
+        this.#lives = 3;
 
         this.setupGameMode(mode);
 
@@ -112,6 +115,10 @@ export class Game {
             case 'chaos':
                 this.#chaosMode = true;
                 break;
+            case 'three lives':
+                this.#lives = 3;
+                break;
+
         }
     }
 
@@ -342,3 +349,11 @@ export class Game {
         }, 300);
     }
 }
+
+//Mode trois vies
+
+/**
+ * Ajoute un compteur de 3 vies
+ */
+
+
