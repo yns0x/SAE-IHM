@@ -1,5 +1,9 @@
 # SAE IHM JavaScript
 
+## Description :
+Ce projet est un jeu memory développé en Javascript dans le cadre de la SAE2.02.
+Le joueur doit retrouver les paires de cartes le plus  rapidement possible.
+
 ## Membres du groupe :
 
 - Maël Zou
